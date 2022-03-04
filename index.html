@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./stylecomplete.css">
+  <link rel="stylesheet" href="https://fonts.google.com/specimen/Barlow?query=barlow#standard-styles">
+  <title>Budgeting</title>
+</head>
+<body>
+  <!-- Top section of the application which summarises my balance, my income and expenses, and a graph show the difference between the two -->
+  <div class="budget-container">
+    <div class="app-title">Matt's Budget Container</div>
+    <div class="budget-header">
+      <div class="balance">
+        <div class="title">Budget</div>
+        <div class="value"></div>
+      </div>
+      <div class="account">
+        <div class="income">
+          <div class="title">Income</div>
+          <div class="income-total"></div>
+        </div>
+        <div class="chart"></div>
+        <div class="outcome">
+          <div class="title">Expenses</div>
+          <div class="outcome-total"></div>
+        </div>
+      </div>
+    </div>
+  <!-- Main section of the application which provides 3 tabs, expenses, income and all, within which lists all the relative elements -->
+  <div class="budget-dashboard">
+    <div class="dash-title">Details</div>
+    <div class="toggle">
+      <div class="tab1">Expenses</div>
+      <div class="tab2 active">Income</div>
+      <div class="tab3">All</div>
+    </div>
+
+  <!-- Income Tab Contents -->
+    <div class="hide" id='expense'></div>
+    <div id='income'>
+      <ul class="list">
+        <li id='0' class="income">
+        <div class="entry">Salary: £1000</div>
+        <div id='edit'></div>
+        <div id='delete'></div>
+      </li>
+      </ul>
+      <!-- the input box that allows me to submit income -->
+      <div class="input">
+        <input type="text" id='income-title-input' name='title' placeholder='Description'>
+        <input type="number" id='income-amount-input' name='amount' placeholder='£0'>
+        <div class="add-income"><img src="./icon/plus.png" alt="plus-icon"></div>
+      </div>
+    </div>
+
+  <!-- Expenses Tab Contents -->
+  <div class="hide" id='income'></div>
+  <div id='expense'>
+    <ul class="list">
+      <li id='0' class="expense">
+      <div class="entry">Expense: £1000</div>
+      <div id='edit'></div>
+      <div id='delete'></div>
+    </li>
+    </ul>
+    <!-- the input box that allows me to submit expenses -->
+    <div class="input">
+      <input type="text" id='expense-title-input' name='title' placeholder='Description'>
+      <input type="number" id='expense-amount-input' name='amount' placeholder='£0'>
+      <div class="add-expense"><img src="./icon/plus.png" alt="plus-icon"></div>
+    </div>
+  </div>
+  
+    <!-- Expenses Tab Contents -->
+    <div class="hide" id='all'></div>
+    <div id='all'>
+      <ul class="list">
+        <li id='0' class="income-expense">
+        <div class="entry">Income/Expense: £1000</div>
+        <div id='edit'></div>
+        <div id='delete'></div>
+      </li>
+      </ul>
+      <!-- the input box that allows me to submit expenses -->
+      <div class="input">
+        <input type="text" id='income-expense-title-input' name='title' placeholder='Description'>
+        <input type="number" id='income-expense-amount-input' name='amount' placeholder='£0'>
+        <div class="add-income-expense"><img src="./icon/plus.png" alt="plus-icon"></div>
+      </div>
+    </div>
+
+    <div class="hide" id='all'></div>
+  </div>
+</div>
+<script src="./budget.js"></script>
+</body>
+</html>

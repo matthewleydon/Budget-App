@@ -1,0 +1,9 @@
+/* Active Tab Opacity */
+.active {
+  opacity: 1 !important;
+}
+
+/* Class to hide elements on the page */
+.hide {
+  display: none;
+}
